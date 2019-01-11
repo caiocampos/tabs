@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Tab } from '../tab';
 import { TabService } from '../tab.service';
 
 @Component({
@@ -8,7 +7,9 @@ import { TabService } from '../tab.service';
   styleUrls: ['./tab.component.css']
 })
 export class TabComponent implements OnInit {
-  @Input() tab: Tab;
+  @Input() id: string;
+  @Input() description: string;
+  @Input() active = 'false';
 
   constructor(private tabService: TabService) { }
 
@@ -16,10 +17,10 @@ export class TabComponent implements OnInit {
   }
 
   isActive() {
-    return this.tabService.getCurrent() === this.tab.id;
+    return this.tabService.getCurrent() === this.id;
   }
 
   activate() {
-    this.tabService.setCurrent(this.tab.id);
+    this.tabService.setCurrent(this.id);
   }
 }

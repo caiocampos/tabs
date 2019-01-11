@@ -13,16 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-  public getRoutes() {
-    return routes.map(r => r.path !== '' && r.path !== '**');
-  }
-
-  public getRoute(route: string) {
-    if (route === '' || route === 'home') {
-      return 'home';
-    }
-    const found = routes.find(r => r.path === route);
-    return found ? route : 'page-not-found';
-  }
-}
+export class AppRoutingModule {}

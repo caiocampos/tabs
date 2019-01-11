@@ -9,6 +9,7 @@ import { TabComponent } from '../tab/tab.component';
 export class TabsComponent implements OnInit, AfterContentInit {
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
 
+  snd = new Audio('./assets/Electric-spark-sound-effect.mp3');
   activeTab: string;
 
   constructor() { }
@@ -28,6 +29,8 @@ export class TabsComponent implements OnInit, AfterContentInit {
   activate(tab: TabComponent): any {
     this.activeTab = tab.id;
     tab.activate();
+    this.snd.currentTime = 0;
+    this.snd.play();
   }
 
 }

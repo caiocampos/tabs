@@ -1,6 +1,7 @@
 <nav>
   <ng-container *ngFor="let tab of tabs">
-      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
+    <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id, 'tab-right': tab.position === 'right', 'tab-left': tab.position !== 'right'}"
+      (click)="activate(tab)">{{tab.description}}</button>
   </ng-container>
 </nav>
 <ng-content select="app-tab"></ng-content>

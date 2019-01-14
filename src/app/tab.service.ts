@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TabService {
-  currentTab: string = null;
+  private currentTab: string = null;
 
   constructor() { }
 

@@ -4,13 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SoundService {
-  private defaultSnd = './assets/snd/Hit-sound.mp3';
+  private defaultSnd = './assets/snd/Blooper-sound-effect.mp3';
   private assets = [];
 
   constructor() { }
 
-  public instantiateSound(path: string): HTMLAudioElement {
-    path = path ? path : this.defaultSnd;
+  instantiateSound(path: string, useDefault: boolean = true): HTMLAudioElement {
+    if (!path) {
+      if (useDefault) {
+        path = this.defaultSnd;
+      } else {
+        return null;
+      }
+    }
     let res: HTMLAudioElement = this.assets[path];
     if (!res) {
       res = this.assets[path] = new Audio(path);

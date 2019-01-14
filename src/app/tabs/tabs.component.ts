@@ -21,8 +21,9 @@ export class TabsComponent implements OnInit, AfterContentInit {
 
   @Input() clickSoundResource: string;
 
-  snd = null;
   activeTab: string = null;
+
+  private snd = null;
 
   constructor(private soundService: SoundService) { }
 
@@ -41,12 +42,8 @@ export class TabsComponent implements OnInit, AfterContentInit {
   }
 
   activate(tab: TabComponent): void {
-    this.activeTab = tab.id;
+    tab.playSound(this.snd);
     tab.activate();
-    if (this.snd) {
-      this.snd.currentTime = 0;
-      this.snd.play();
-    }
+    this.activeTab = tab.id;
   }
-
 }

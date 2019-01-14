@@ -21,3 +21,11 @@ nav {
   padding: 5px;
   margin: 5px 0px;
 }
+
+.tab-right {
+  float: right;
+}
+
+.tab-left {
+  float: initial;
+}

@@ -1,7 +1,11 @@
+p {
+  text-align: justify;
+}
+
 .random-img {
   text-align: center;
 }
 
-p {
-  text-align: justify;
+.tab-right {
+  text-align: right;
 }

@@ -7,6 +7,8 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tab/tab.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BaconIpsumComponent } from './bacon-ipsum/bacon-ipsum.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     TabsComponent,
     TabComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BaconIpsumComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

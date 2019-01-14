@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TabService {
-  currentRout: string;
+  currentTab: string = null;
 
   constructor() { }
 
-  setCurrent(rout: string) {
-    this.currentRout = rout;
+  setCurrent(tab: string) {
+    this.currentTab = tab;
   }
 
   getCurrent() {
-    return this.currentRout;
+    return this.currentTab;
   }
 }

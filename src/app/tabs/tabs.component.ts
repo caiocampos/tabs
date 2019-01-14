@@ -1,5 +1,6 @@
-import { Component, OnInit, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+import { Component, OnInit, ContentChildren, QueryList, AfterContentInit, Input } from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
+import { SoundService } from '../sound.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,30 +8,45 @@ import { TabComponent } from '../tab/tab.component';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit, AfterContentInit {
+  // Captura múltiplos elementos
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+  // @ViewChildren(TabComponent) tabs: QueryList<TabComponent>;
 
-  snd = new Audio('./assets/Electric-spark-sound-effect.mp3');
-  activeTab: string;
+  // Captura um elemento
+  // @ContentChild(TabComponent) tab: TabComponent;
+  // @ViewChild(TabComponent) tab: TabComponent;
 
-  constructor() { }
+  // @ContentChildren e @ContentChild somente após ngAfterContentInit() da interface AfterContentInit
+  // @ViewChildren e @ViewChild somente após ngAfterViewInit() da interface AfterViewInit
+
+  @Input() clickSoundResource: string;
+
+  snd = null;
+  activeTab: string = null;
+
+  constructor(private soundService: SoundService) { }
 
   ngOnInit() {
+    this.snd = this.soundService.instantiateSound(this.clickSoundResource);
   }
 
   ngAfterContentInit(): void {
-    const active = this.tabs.find(tab => tab.active === 'true');
+    const active: TabComponent = this.tabs.find(tab => tab.active === 'true');
     if (active) {
       active.activate();
       this.activeTab = active.id;
+    } else {
+      this.activeTab = null;
     }
-    this.activeTab = undefined;
   }
 
-  activate(tab: TabComponent): any {
+  activate(tab: TabComponent): void {
     this.activeTab = tab.id;
     tab.activate();
-    this.snd.currentTime = 0;
-    this.snd.play();
+    if (this.snd) {
+      this.snd.currentTime = 0;
+      this.snd.play();
+    }
   }
 
 }

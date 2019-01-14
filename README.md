@@ -1,27 +1,41 @@
 # Tabs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+Projeto de componente de abas em Angular
 
-## Development server
+## Uso:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```html
+<app-tabs clickSoundResource="./assets/snd/Hit-sound.mp3">
+  <app-tab id="home" description="Início" active="true">
+    <div class="random-img">
+      <img src="https://picsum.photos/1000/500/?random" alt="Imagem aleatória">
+    </div>
+  </app-tab>
+  <app-tab id="bacon-ipsum" description="Bacon Ipsum">
+    <app-bacon-ipsum></app-bacon-ipsum>
+  </app-tab>
+  <app-tab id="about" description="Sobre" position="right" 
+           clickSoundResource="./assets/snd/Connection-established-sound-effect.mp3">
+    <app-about></app-about>
+  </app-tab>
+</app-tabs>
+```
 
-## Code scaffolding
+## Imagens:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Imagem](https://i.ibb.co/QpmP17Q/1.jpg)
 
-## Build
+## Recursos utilizados:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Imagens:
 
-## Running unit tests
+[Freepik](http://www.freepik.com/)
+[Lorem Picsum](https://picsum.photos/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Sons:
 
-## Running end-to-end tests
+[Orange Free Sounds](http://www.orangefreesounds.com/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Outros:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Bacon Ipsum](https://baconipsum.com/)

@@ -20,12 +20,19 @@ nav {
   background-color: #002233;
   padding: 5px;
   margin: 5px 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.tab-right {
-  float: right;
+.push-left {
+  margin-right: auto;
 }
 
-.tab-left {
-  float: initial;
+.to-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.push-right {
+  margin-left: auto;
 }

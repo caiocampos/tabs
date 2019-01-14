@@ -24,6 +24,9 @@ export class TabsComponent implements OnInit, AfterContentInit {
   activeTab: string = null;
 
   private snd = null;
+  private leftTabs = [];
+  private centerTabs = [];
+  private rightTabs = [];
 
   constructor(private soundService: SoundService) { }
 
@@ -39,6 +42,28 @@ export class TabsComponent implements OnInit, AfterContentInit {
     } else {
       this.activeTab = null;
     }
+    this.tabs.changes.subscribe(() => {
+      this.updateTabs();
+    });
+    this.updateTabs();
+  }
+
+  private updateTabs(): void {
+    this.leftTabs = [];
+    this.centerTabs = [];
+    this.rightTabs = [];
+    this.tabs.forEach(tab => {
+      switch (tab.position) {
+        case 'right':
+          this.rightTabs.push(tab);
+          break;
+        case 'center':
+          this.centerTabs.push(tab);
+          break;
+        default:
+          this.leftTabs.push(tab);
+      }
+    });
   }
 
   activate(tab: TabComponent): void {

@@ -30,6 +30,7 @@ Projeto de componente de abas em Angular
 ### Imagens:
 
 [Freepik](http://www.freepik.com/)
+
 [Lorem Picsum](https://picsum.photos/)
 
 ### Sons:

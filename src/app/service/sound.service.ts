@@ -9,6 +9,12 @@ export class SoundService {
 
   constructor() { }
 
+  /**
+   * Inicializa um elemento de audio HTML
+   * @param path caminho para o arquivo de audio que será carregado
+   * @param useDefault flag usada quando path é vazio ('', null, undefined), se verdadeiro usará como path
+   * a variável defaultSnd, se falso o método retornará null
+   */
   instantiateSound(path: string, useDefault: boolean = true): HTMLAudioElement {
     if (!path) {
       if (useDefault) {

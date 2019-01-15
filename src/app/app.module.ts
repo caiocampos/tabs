@@ -2,14 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { TabComponent } from './tab/tab.component';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { BaconIpsumComponent } from './bacon-ipsum/bacon-ipsum.component';
-import { AboutComponent } from './about/about.component';
+import { AppComponent } from './component/app.component';
+import { TabsComponent } from './component/tabs/tabs.component';
+import { TabComponent } from './component/tab/tab.component';
+import { HomeComponent } from './component/home/home.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import { BaconIpsumComponent } from './component/bacon-ipsum/bacon-ipsum.component';
+import { AboutComponent } from './component/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

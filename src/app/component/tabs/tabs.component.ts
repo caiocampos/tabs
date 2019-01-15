@@ -1,6 +1,6 @@
 import { Component, OnInit, ContentChildren, QueryList, AfterContentInit, Input } from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
-import { SoundService } from '../sound.service';
+import { SoundService } from '../../service/sound.service';
 
 @Component({
   selector: 'app-tabs',
@@ -16,8 +16,14 @@ export class TabsComponent implements OnInit, AfterContentInit {
   // @ContentChild(TabComponent) tab: TabComponent;
   // @ViewChild(TabComponent) tab: TabComponent;
 
-  // @ContentChildren e @ContentChild somente após ngAfterContentInit() da interface AfterContentInit
-  // @ViewChildren e @ViewChild somente após ngAfterViewInit() da interface AfterViewInit
+  /* @ContentChildren e @ContentChild recebem conteúdo somente antes da chamada do ngAfterContentInit()
+     da interface AfterContentInit, possuem a capacidade de acessar os elementos "filho" que serão
+     incluídos através da transclusão pelo <ng-content>
+  */
+  /* @ViewChildren e @ViewChild recebem conteúdo somente antes da chamada do ngAfterViewInit() da
+     interface AfterViewInit, possuem a capacidade de acessar os elementos "filho" que estão dentro do
+     template (neste componente a tag <nav> seria capturada)
+  */
 
   @Input() clickSoundResource: string;
 
@@ -30,10 +36,16 @@ export class TabsComponent implements OnInit, AfterContentInit {
 
   constructor(private soundService: SoundService) { }
 
+  /**
+   * Instancia o arquivo de áudio localizado pelo atributo clickSoundResource
+   */
   ngOnInit() {
     this.snd = this.soundService.instantiateSound(this.clickSoundResource);
   }
 
+  /**
+   * Coloca como ativa a primeira aba com o atributo active 'true' e alimenta os containers de abas
+   */
   ngAfterContentInit(): void {
     const active: TabComponent = this.tabs.find(tab => tab.active === 'true');
     if (active) {
@@ -48,6 +60,9 @@ export class TabsComponent implements OnInit, AfterContentInit {
     this.updateTabs();
   }
 
+  /**
+   * Atualiza o conteúdo dos containers de abas (laterais e central)
+   */
   private updateTabs(): void {
     this.leftTabs = [];
     this.centerTabs = [];
@@ -66,6 +81,10 @@ export class TabsComponent implements OnInit, AfterContentInit {
     });
   }
 
+  /**
+   * Desencadeia o processo de ativação de uma aba
+   * @param tab id da aba a ser ativada
+   */
   activate(tab: TabComponent): void {
     tab.playSound(this.snd);
     tab.activate();

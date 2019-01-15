@@ -8,11 +8,18 @@ export class TabService {
 
   constructor() { }
 
-  setCurrent(tab: string) {
+  /**
+   * Altera qual aba está selecionada
+   * @param tab id da aba selecionada
+   */
+  setCurrent(tab: string): void {
     this.currentTab = tab;
   }
 
-  getCurrent() {
+  /**
+   * Recupera a aba que está selecionada
+   */
+  getCurrent(): string {
     return this.currentTab;
   }
 }

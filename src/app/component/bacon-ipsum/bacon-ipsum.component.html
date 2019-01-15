@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <label>Número de Parágrafos:
+      <input [(ngModel)]="paragraphs" placeholder="Parágrafos">
+    </label>
+  </div>
+  <div>
+    <label>Sem Filler:
+      <input type="checkbox" [(ngModel)]="allMeat">
+    </label>
+  </div>
+  <div>
+    <label>Começa com Bacon:
+      <input type="checkbox" [(ngModel)]="startWithLorem">
+    </label>
+  </div>
+  <button (click)="requestText()">Gerar Texto</button>
+</div>
+
+<ng-container *ngFor="let p of data">
+  <p>{{p}}</p>
+</ng-container>

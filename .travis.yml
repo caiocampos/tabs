@@ -22,4 +22,5 @@ script:
   github_token: $GITHUB_TOKEN
   local_dir: dist/tabs
   on:
-branch: master
+    branch: master
+    

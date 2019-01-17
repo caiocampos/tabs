@@ -1,4 +1,9 @@
-# Tabs [<img src="https://api.travis-ci.org/caiocampos/tabs.svg?branch=master">](https://travis-ci.org/caiocampos/tabs)
+# Tabs
+
+[<img src="https://api.travis-ci.org/caiocampos/tabs.svg?branch=master">](https://travis-ci.org/caiocampos/tabs)
+![](https://img.shields.io/david/caiocampos/tabs.svg)
+[![License](https://img.shields.io/github/license/caiocampos/tabs.svg)](LICENSE)
+
 
 Projeto de componente de abas em Angular
 

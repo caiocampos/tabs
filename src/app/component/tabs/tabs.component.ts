@@ -28,11 +28,11 @@ export class TabsComponent implements OnInit, AfterContentInit {
   @Input() clickSoundResource: string;
 
   activeTab: string = null;
+  leftTabs = [];
+  centerTabs = [];
+  rightTabs = [];
 
   private snd = null;
-  private leftTabs = [];
-  private centerTabs = [];
-  private rightTabs = [];
 
   constructor(private soundService: SoundService) { }
 

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  width = window.innerWidth * 0.9;
+  height = window.innerHeight * 0.7;
+
   constructor() { }
 
   ngOnInit() {

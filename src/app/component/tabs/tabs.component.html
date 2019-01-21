@@ -1,20 +1,17 @@
 <nav>
   <span class="push-left">
     <ng-container *ngFor="let tab of leftTabs">
-      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}"
-        (click)="activate(tab)">{{tab.description}}</button>
+      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
     </ng-container>
   </span>
   <span class="to-center">
     <ng-container *ngFor="let tab of centerTabs">
-      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}"
-        (click)="activate(tab)">{{tab.description}}</button>
+      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
     </ng-container>
   </span>
   <span class="push-right">
     <ng-container *ngFor="let tab of rightTabs">
-      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}"
-        (click)="activate(tab)">{{tab.description}}</button>
+      <button id="tab-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
     </ng-container>
   </span>
 </nav>

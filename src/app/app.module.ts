@@ -22,12 +22,7 @@ import { FormsModule } from '@angular/forms';
     BaconIpsumComponent,
     AboutComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

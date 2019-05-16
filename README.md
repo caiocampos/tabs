@@ -10,7 +10,7 @@ Projeto de componente de abas em Angular
 ## Uso:
 
 ```html
-<app-tabs clickSoundResource="./assets/snd/Hit-sound.mp3">
+<app-tabs clickSoundResource="./assets/snd/Hit-sound.ogg">
   <app-tab id="home" description="Início" active="true">
     <div class="random-img">
       <img src="https://picsum.photos/1000/500/?random" alt="Imagem aleatória">
@@ -20,7 +20,7 @@ Projeto de componente de abas em Angular
     <app-bacon-ipsum></app-bacon-ipsum>
   </app-tab>
   <app-tab id="about" description="Sobre" position="right" 
-           clickSoundResource="./assets/snd/Connection-established-sound-effect.mp3">
+           clickSoundResource="./assets/snd/Connection-established-sound-effect.ogg">
     <app-about></app-about>
   </app-tab>
 </app-tabs>
@@ -45,3 +45,4 @@ Projeto de componente de abas em Angular
 ### Outros:
 
 [Bacon Ipsum](https://baconipsum.com/)
+[Online Audio Converter](https://online-audio-converter.com/)

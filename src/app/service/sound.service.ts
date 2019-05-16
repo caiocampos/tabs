@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SoundService {
-  private defaultSnd = './assets/snd/Blooper-sound-effect.mp3';
+  private defaultSnd = './assets/snd/Blooper-sound-effect.ogg';
   private assets = [];
 
   constructor() { }

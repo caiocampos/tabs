@@ -13,7 +13,10 @@ before_script:
 
 script:
   - ng lint
-  - ng build --prod --base-href https://caiocampos.github.io/tabs/
+  - ng build --prod --base-href /tabs/
+  - cd dist/tabs
+  - cp index.html 404.html
+  - cd ../..
 
 deploy:
   provider: pages

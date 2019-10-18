@@ -3,6 +3,7 @@
 [<img src="https://api.travis-ci.org/caiocampos/tabs.svg?branch=master">](https://travis-ci.org/caiocampos/tabs)
 ![](https://img.shields.io/david/caiocampos/tabs.svg)
 [![DepShield Badge](https://depshield.sonatype.org/badges/caiocampos/tabs/depshield.svg)](https://depshield.github.io)
+[![GuardRails Badge](https://badges.guardrails.io/caiocampos/tabs.svg)](https://www.guardrails.io/)
 [![License](https://img.shields.io/github/license/caiocampos/tabs.svg)](LICENSE)
 
 

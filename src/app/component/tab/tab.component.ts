@@ -5,7 +5,7 @@ import { SoundService } from '../../service/sound.service';
 @Component({
   selector: 'app-tab',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.css']
+  styleUrls: ['./tab.component.scss']
 })
 export class TabComponent implements OnInit {
   @Input() id: string;

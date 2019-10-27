@@ -5,7 +5,7 @@ import { SoundService } from '../../service/sound.service';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.css']
+  styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit, AfterContentInit {
   // Captura múltiplos elementos

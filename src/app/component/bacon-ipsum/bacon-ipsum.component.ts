@@ -5,7 +5,7 @@ import { BaconIpsum } from 'src/app/model/bacon-ipsum';
 @Component({
   selector: 'app-bacon-ipsum',
   templateUrl: './bacon-ipsum.component.html',
-  styleUrls: ['./bacon-ipsum.component.css']
+  styleUrls: ['./bacon-ipsum.component.scss']
 })
 export class BaconIpsumComponent implements OnInit {
   data: string[] = [];

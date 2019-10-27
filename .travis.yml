@@ -9,7 +9,7 @@ branches:
   - master
 
 before_install:
-  - echo -e "registry=https://npm.pkg.github.com/caiocampos\n//npm.pkg.github.com/:_authToken=\${GITHUB_TOKEN}" > .npmrc
+  - echo -e "\n//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> .npmrc
 
 before_script:
   - npm install -g @angular/cli

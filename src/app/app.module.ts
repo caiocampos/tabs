@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 
 import { LinksButtonsModule } from '@caiocampos/links-buttons';
 
+import { TabsModule } from '../../projects/caiocampos/tabs/src/lib/tabs.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './component/app.component';
-import { TabsComponent } from './component/tabs/tabs.component';
-import { TabComponent } from './component/tab/tab.component';
 import { HomeComponent } from './component/home/home.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { BaconIpsumComponent } from './component/bacon-ipsum/bacon-ipsum.component';
@@ -17,8 +17,6 @@ import { AboutComponent } from './component/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TabsComponent,
-    TabComponent,
     HomeComponent,
     PageNotFoundComponent,
     BaconIpsumComponent,
@@ -29,7 +27,8 @@ import { AboutComponent } from './component/about/about.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    LinksButtonsModule
+    LinksButtonsModule,
+    TabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

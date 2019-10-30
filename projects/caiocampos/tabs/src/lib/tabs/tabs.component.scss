@@ -1,0 +1,43 @@
+nav {
+	background-color: #002233;
+	padding: 5px;
+	margin: 5px 0px;
+	display: flex;
+	justify-content: space-between;
+
+	.tab {
+		&-left {
+			@extend .tab;
+			margin-right: auto;
+		}
+
+		&-center {
+			@extend .tab;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&-right {
+			@extend .tab;
+			margin-left: auto;
+		}
+
+		button {
+			padding: 5px 20px 1px 20px;
+			border: none;
+			background-color: whitesmoke;
+			border-bottom: 4px solid whitesmoke;
+			margin: 0px 1px;
+			font-weight: bold;
+
+			&.selected {
+				background-color: lightgoldenrodyellow;
+				border-bottom: 4px solid yellowgreen;
+			}
+
+			&:hover {
+				border-bottom: 4px solid greenyellow;
+			}
+		}
+	}
+}

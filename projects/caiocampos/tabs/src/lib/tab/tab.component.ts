@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TabService } from '../../service/tab.service';
-import { SoundService } from '../../service/sound.service';
+import { TabService } from '../service/tab.service';
+import { SoundService } from '../service/sound.service';
 
 @Component({
-  selector: 'app-tab',
+  selector: 'tb-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss']
 })

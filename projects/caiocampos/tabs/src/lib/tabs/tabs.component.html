@@ -1,0 +1,18 @@
+<nav>
+  <span class="tab-left">
+    <ng-container *ngFor="let tab of leftTabs">
+      <button name="tab-bt-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
+    </ng-container>
+  </span>
+  <span class="tab-center">
+    <ng-container *ngFor="let tab of centerTabs">
+      <button name="tab-bt-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
+    </ng-container>
+  </span>
+  <span class="tab-right">
+    <ng-container *ngFor="let tab of rightTabs">
+      <button name="tab-bt-{{tab.id}}" [ngClass]="{'selected': activeTab === tab.id}" (click)="activate(tab)">{{tab.description}}</button>
+    </ng-container>
+  </span>
+</nav>
+<ng-content select="tb-tab"></ng-content>

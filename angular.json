@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "@caiocampos/tabs": {
+      "projectType": "library",
+      "root": "projects/caiocampos/tabs",
+      "sourceRoot": "projects/caiocampos/tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/caiocampos/tabs/tsconfig.lib.json",
+            "project": "projects/caiocampos/tabs/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/caiocampos/tabs/src/test.ts",
+            "tsConfig": "projects/caiocampos/tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/caiocampos/tabs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/caiocampos/tabs/tsconfig.lib.json",
+              "projects/caiocampos/tabs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "tabs"

@@ -12,20 +12,20 @@ Projeto de componente de abas em Angular
 ## Uso:
 
 ```html
-<app-tabs clickSoundResource="./assets/snd/Hit-sound.ogg">
-  <app-tab id="home" description="Início" active="true">
+<tb-tabs clickSoundResource="./assets/snd/Hit-sound.ogg">
+  <tb-tab id="home" description="Início" active="true">
     <div class="random-img">
       <img src="https://picsum.photos/1000/500/?random" alt="Imagem aleatória">
     </div>
-  </app-tab>
-  <app-tab id="bacon-ipsum" description="Bacon Ipsum">
+  </tb-tab>
+  <tb-tab id="bacon-ipsum" description="Bacon Ipsum">
     <app-bacon-ipsum></app-bacon-ipsum>
-  </app-tab>
-  <app-tab id="about" description="Sobre" position="right" 
+  </tb-tab>
+  <tb-tab id="about" description="Sobre" position="right" 
            clickSoundResource="./assets/snd/Connection-established-sound-effect.ogg">
     <app-about></app-about>
-  </app-tab>
-</app-tabs>
+  </tb-tab>
+</tb-tabs>
 ```
 
 ## Imagens:

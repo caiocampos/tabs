@@ -21,6 +21,14 @@
     "paths": {
       "core-js/es7/reflect": [
         "node_modules/core-js/proposals/reflect-metadata"
+      ],
+      "@caiocampos/tabs": [
+        "dist/caiocampos/tabs",
+        "dist/caiocampos/tabs"
+      ],
+      "@caiocampos/tabs/*": [
+        "dist/caiocampos/tabs/*",
+        "dist/caiocampos/tabs/*"
       ]
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "@caiocampos/tabs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": ">=8 <= 8.2.13",
     "@angular/core": ">=8 <= 8.2.13"

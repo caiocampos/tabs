@@ -23,7 +23,7 @@
     "@caiocampos/links-buttons": "^0.0.5",
     "core-js": "^3.6.5",
     "rxjs": "~6.5.5",
-    "tar": "^6.0.1",
+    "tar": "^6.0.2",
     "tslib": "^1.13.0",
     "zone.js": "^0.9.1"
   },

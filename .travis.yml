@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-  - "12"
+  - "14"
 dist: bionic
 sudo: required
 
 before_script:
-  - npm install -g @angular/cli
+  - npm install -g @angular/cli@8
 
 jobs:
   include:

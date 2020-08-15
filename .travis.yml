@@ -5,7 +5,7 @@ dist: bionic
 sudo: required
 
 before_script:
-  - npm install -g @angular/cli@8
+  - npm install -g @angular/cli@10
 
 jobs:
   include:

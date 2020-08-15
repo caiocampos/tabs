@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/tabs",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -53,6 +54,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -145,6 +150,11 @@
           "options": {
             "tsConfig": "projects/caiocampos/tabs/tsconfig.lib.json",
             "project": "projects/caiocampos/tabs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/caiocampos/tabs/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -170,5 +180,8 @@
       }
     }
   },
-  "defaultProject": "tabs"
+  "defaultProject": "tabs",
+  "cli": {
+    "analytics": "c3b67b98-f9b5-41dc-bc0e-b72849c18ba3"
+  }
 }

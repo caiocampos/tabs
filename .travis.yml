@@ -5,7 +5,7 @@ dist: bionic
 sudo: required
 
 before_script:
-  - npm install -g @angular/cli@10
+  - npm install -g @angular/cli@11
 
 jobs:
   include:
@@ -34,6 +34,5 @@ jobs:
         skip_cleanup: true
         api_key: $NPM_TOKEN
         email: "caio.campos1204@gmail.com"
-        tag: next
         on:
           tags: true

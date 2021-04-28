@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "14"
+  - "15"
 dist: bionic
 sudo: required
 
@@ -11,7 +11,7 @@ jobs:
   include:
     - stage: pages
       script:
-        - npm run build-lib
+        - npm run build-lib-prod
         - ng lint
         - ng build --prod --base-href /tabs/
         - cd dist/tabs
@@ -26,7 +26,7 @@ jobs:
           branch: master
     - stage: npm
       script:
-        - npm run build-lib
+        - npm run build-lib-prod
       before_deploy:
         - cd dist/caiocampos/tabs
       deploy: &npm

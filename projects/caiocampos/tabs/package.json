@@ -1,9 +1,9 @@
 {
   "name": "@caiocampos/tabs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "peerDependencies": {
-    "@angular/common": "~11",
-    "@angular/core": "~11"
+    "@angular/common": "~12",
+    "@angular/core": "~12"
   },
   "repository": {
     "type": "git",
@@ -13,6 +13,6 @@
     "access": "public"
   },
   "dependencies": {
-    "tslib": "^2.0.3"
+    "tslib": "~2.2.0"
   }
 }

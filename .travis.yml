@@ -5,7 +5,7 @@ dist: bionic
 sudo: required
 
 before_script:
-  - npm install -g @angular/cli@11
+  - npm install -g @angular/cli@12
 
 jobs:
   include:
@@ -13,7 +13,7 @@ jobs:
       script:
         - npm run build-lib-prod
         - ng lint
-        - ng build --prod --base-href /tabs/
+        - ng build --configuration production --base-href /tabs/
         - cd dist/tabs
         - cp index.html 404.html
         - cd ../..
